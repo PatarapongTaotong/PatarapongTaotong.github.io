@@ -20,6 +20,27 @@ body {
 }
 
 /*---- Menu ----*/
+.logo {
+  height: 20px;
+}
+
+.menu-bar {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 24px;
+}
 
 /*---- Hero Section ----*/
 .hero-section {
@@ -79,12 +100,18 @@ body {
 
 /*---- Product Section ----*/
 .product-item {
-  width: calc(100%/3);
+  box-sizing: border;
+  width: calc(100%/3 - 32px);
   margin-bottom: 16px;
+  padding: 0px 16px;
+  position: relative;
 }
+
 
 .product-item-image {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
   font-size: 18px;
   font-weight: 600;
   border-radius: 18px;
@@ -101,4 +128,40 @@ body {
   margin-top: 24px;
 }
 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.product-label {
+  background-color: #f87060;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px;
+  width: fit-content;
+  position: absolute;
+  top: 24px;
+  left: -8px;
+}
+
 /*---- About Section ----*/
+.about-content {
+  display: flex;
+}
+
+.about-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-image {
+  width: 50%;
+  height: 320px;
+  object-fit: cover;
+  margin-right: 24px;
+}
