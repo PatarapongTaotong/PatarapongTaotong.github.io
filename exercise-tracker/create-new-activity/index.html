@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Exerack</title>
+      <link rel="stylesheet" href="./CSS/main.css"/>
+  </head>
+  <body>
+      <!-- Navbar -->
+      <section id="navbar">
+        <div class="navbar-menu">
+          <div class="logo">
+              <img src="..." alt="Exerack logo" height="32px"/>
+          </div>
+          <div class="menu-bar">
+              <a href="../index.html">Home</a>
+              <a href="">Activity</a>
+              <a href="">Discoveries</a>
+              <div class="dropdown">
+                  <button class="dropbtn">Profile <img src="../images/drop-down.png" alt="drop down sign" height="10px"/> </button>
+                  <div class="dropdown-content">
+                    <a href="#"> <img src="..." alt="My name symbol"/> My name</a>
+                    <a href="#"> <img src="..." alt="Notification symbol"/> Notification</a>
+                    <a href="#"> <img src="..." alt="Security symbol"/> Privacy & Security</a>
+                    <a href="#"> <img src="..." alt="Setting symbol"/> Setting</a>
+                    <div class="log-out">
+                      <button>Log out</button>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Create activity -->
+      <section id="new-activity">
+        <h1>Create activity</h1>
+        <div class="new-form">
+        <form class="ac-form">
+          <div>
+            <label for="ac-type">Activity type:</label>
+            <select id="ac-type" name="ac-type" required>
+              <option value="run">Run</option>
+              <option value="bicycle">Bicycle</option>
+              <option value="ride">Ride</option>
+              <option value="swim">Swim</option>
+              <option value="walk">Walk</option>
+              <option value="hike">Hike</option>
+            </select>
+          </div>
+          <div>
+            <label for="ac-name">Activity name:</label>
+            <input id="ac-name" name="ac-name" type="text" placeholder="Type activity name" required/>
+          </div>
+          <div>
+            <label for="ac-describe">Activity description:</label>
+            <input id="ac-describe" name="ac-describe" type="text" placeholder="Add more detail" required/>
+          </div>
+          <div>
+            <label for="ac-location">Location:</label>
+            <input id="ac-location" name="location" type="text"/>
+          </div>
+          <div>
+            <label for="ac-date">Date:</label>
+            <input id="ac-date" name="ac-date" type="date" required/>
+          </div>
+          <div class="time">
+              <div>
+                Time:
+              </div>
+              <div class="time-point">
+                <label for="ac-time-start">From:</label>
+                <input id="ac-time-start" name="ac-time-start" type="time" required/>
+              </div>
+              <div class="time-point">
+                <label for="ac-time-finish">To:</label>
+                <input id="ac-time-finish" name="ac-time-finish" type="time" required/>
+              </div>
+          </div>
+          <div>
+            Duration: ___ mins
+          </div>
+          <div class="create-button">
+            <input type="submit" value="Create"/>
+          </div>
+        </form>
+      </div>
+
+      </section>
+
+  </body>
+</html>

@@ -1,0 +1,108 @@
+/* Navbar */
+#navbar {
+  background-color: white;
+  border: 1px solid black;
+  padding: 16px;
+  margin-bottom: 32px;
+  position: sticky;
+  top: 0px;
+}
+
+.menu-bar a {
+  color: black;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  width: 100%;
+  color: black;
+  padding: 12px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:active .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.log-out {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Activity */
+.heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.ac-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid black;
+}
+
+.ac-head a {
+  text-decoration: none;
+  color: orange;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid black;
+}
+
+.activity-topic {
+  width: 50%;
+  display: flex;
+}
+
+.activity-detail {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.activity-topic div {
+  margin-right: 64px;
+}
+
+.activity-detail div {
+  margin-left: 64px;
+}
+
+.more-detail {
+  text-decoration: none;
+  color: brown;
+}

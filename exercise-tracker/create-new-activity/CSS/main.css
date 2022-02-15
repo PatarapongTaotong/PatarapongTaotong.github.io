@@ -1,0 +1,113 @@
+/* Common */
+/* * {
+  border: 1px solid black;
+} */
+
+/* Navbar */
+#navbar {
+  background-color: white;
+  border: 1px solid black;
+  padding: 16px;
+  margin-bottom: 32px;
+  position: sticky;
+  top: 0px;
+}
+
+.menu-bar a {
+  color: black;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  width: 100%;
+  color: black;
+  padding: 12px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:active .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.log-out {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Create activity */
+.new-form {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 64px 0px 32px 0px;
+}
+
+.ac-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ac-form div {
+  margin-top: 32px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.time div {
+  margin-top: 0px;
+  margin-right: 100px;
+}
+
+.time-point {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-button {
+  display: flex;
+  justify-content: center;
+}
+
+input[type="submit"] {
+  padding: 16px 64px;
+  background: red;
+  color: white;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
