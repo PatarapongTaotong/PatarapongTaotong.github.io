@@ -7,5 +7,5 @@ function askMyName() {
 
 function helloWorld() {
     const h1message = document.getElementById("myname").innerHTML
-    alert(h1message + ' ชวน ยังหลีกภัย แล้วพี่เป็นใคร ไม่หลีกผม')
+    alert(h1message + ' ถึงรถจะไม่แรง แต่ฟันพี่ไม่แปรงนะค้าบบ')
 }
