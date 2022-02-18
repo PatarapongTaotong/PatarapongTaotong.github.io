@@ -14,7 +14,7 @@ function calAge() {
     const birthYear = prompt('คุณเกิดในปี ค.ศ.')
     let age = 2022 - birthYear;
     if (age != 2022) {
-        alert('ยินดีด้วย นายอยู่ในประเทศแบบนี้อ่ะมา ' + age + ' ปีแล้ว')
+        alert('ยินดีด้วย นายอยู่ในประเทศแบบนี้อ่ะมา ' + String(age) + ' ปีแล้ว')
     }
 }
 
