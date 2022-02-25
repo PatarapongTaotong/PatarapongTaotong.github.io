@@ -1,16 +1,42 @@
 /*---- Common ----*/
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.button {
+  display: block;
+  background-color: #f87060;
+  color: white;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.button:active {
+  opacity: 0.9;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0px auto;
+  padding: 0px 24px;
+}
+
+@media screen and (max-width: 512px) {
+  .container {
+    padding: 0px 12px;
+  }
 }
 
 .section {
   margin-bottom: 64px;
-}
-
-body {
-  font-family: IBM Plex Sans Thai Looped;
 }
 
 .section-title {
@@ -29,22 +55,53 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-bar {
+    height: 96px;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+.menu-bar-wrapper {
   position: sticky;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  z-index: 99;
+  background-color: white;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.nav-link:active {
+  opacity: 0.5;
+}
+
+.nav-link:hover {
+  color: #f87060;
 }
 
 .nav-list {
   display: flex;
 }
 
-.nav-item {
+.nav-item:not(:first-child) {
   margin-left: 24px;
 }
 
 /*---- Hero Section ----*/
 .hero-section {
-  background-image: url('../images/hero-background.jpg'); /* Photo by Nicholas Kampouris on Unsplash */
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/hero-background.jpg"); /* Photo by Nicholas Kampouris on Unsplash */
   background-size: cover;
   background-position: center center;
   height: 720px;
@@ -54,14 +111,33 @@ body {
   font-size: 64px;
   font-weight: 600;
   padding-top: 128px;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 512px) {
+  .hero-title {
+    font-size: 48px;
+  }
 }
 
 /*---- Collection Section ----*/
+.collection-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "first first second third"
+    "first first fourth fourth";
+  row-gap: 16px;
+  column-gap: 16px;
+}
+
 .collection-item {
   background-size: cover;
   background-position: 50% 82%;
   padding: 24px;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
 .collection-item-title {
@@ -71,50 +147,107 @@ body {
 }
 
 .collection-item-one {
-  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.1)),
-    url('../images/classic-collection.jpg'); /* Photo by NordWood Themes on Unsplash */
+  grid-area: first;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.9),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("../images/classic-collection.jpg"); /* Photo by NordWood Themes on Unsplash */
 }
 
 .collection-item-two {
+  grid-area: second;
   background-image: linear-gradient(
       to bottom right,
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.2)
     ),
-    url('../images/sport-collection.jpg'); /* Photo by Tom Radetzki on Unsplash */
+    url("../images/sport-collection.jpg"); /* Photo by Tom Radetzki on Unsplash */
 }
 
 .collection-item-three {
+  grid-area: third;
   background-image: linear-gradient(
       to bottom right,
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.3)
     ),
-    url('../images/sandal-collection.jpg'); /* Photo by Andy Garza on Unsplash */
+    url("../images/sandal-collection.jpg"); /* Photo by Andy Garza on Unsplash */
 }
 
 .collection-item-four {
-  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.2)),
-    url('../images/casual-collection.jpg'); /* Photo by Trendest Studio on Unsplash */
+  grid-area: fourth;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../images/casual-collection.jpg"); /* Photo by Trendest Studio on Unsplash */
+}
+
+@media screen and (max-width: 768px) {
+  .collection-list {
+    grid-template-areas:
+      "first first second second"
+      "third third fourth fourth";
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .collection-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "first"
+      "second"
+      "third"
+      "fourth";
+  }
 }
 
 /*---- Product Section ----*/
-.product-item {
-  box-sizing: border;
-  width: calc(100%/3 - 32px);
-  margin-bottom: 16px;
-  padding: 0px 16px;
-  position: relative;
+.product-label {
+  background-color: #f87060;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px;
+  width: fit-content;
+  position: absolute;
+  top: 24px;
+  left: -8px;
 }
 
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 16px;
+  column-gap: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-item {
+  width: 100%;
+  position: relative;
+}
 
 .product-item-image {
   width: 100%;
   height: 250px;
-  object-fit: cover;
-  font-size: 18px;
-  font-weight: 600;
   border-radius: 18px;
+  object-fit: cover;
   margin-bottom: 12px;
 }
 
@@ -128,28 +261,26 @@ body {
   margin-top: 24px;
 }
 
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -16px;
-  margin-right: -16px;
-}
-
-.product-label {
-  background-color: #f87060;
-  color: white;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 12px;
-  width: fit-content;
-  position: absolute;
-  top: 24px;
-  left: -8px;
+.price::after {
+  content: " Baht";
 }
 
 /*---- About Section ----*/
 .about-content {
   display: flex;
+}
+
+.about-description {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.about-image {
+  width: 50%;
+  height: 320px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 24px;
 }
 
 .about-info {
@@ -159,9 +290,74 @@ body {
   justify-content: space-between;
 }
 
-.about-image {
-  width: 50%;
-  height: 320px;
-  object-fit: cover;
-  margin-right: 24px;
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-bottom: 24px;
+    margin-right: 0px;
+  }
+
+  .about-info {
+    width: 100%;
+  }
+
+  .about-description {
+    margin-bottom: 24px;
+  }
+}
+
+/* Social List */
+.social-list {
+  position: fixed;
+  right: 72px;
+  bottom: 60px;
+}
+
+.social-logo {
+  width: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .social-list {
+    display: none;
+  }
+}
+
+/* Effect */
+
+.hover-elevate {
+  transition: box-shadow 0.1s ease-out 0s, transform 0.1s ease-out 0s;
+  cursor: pointer;
+}
+
+.hover-elevate:hover {
+  box-shadow: rgba(32, 32, 32, 0.05) 0px 16px 16px 0px,
+    rgba(42, 42, 42, 0.05) 0px 8px 8px 0px,
+    rgba(49, 49, 49, 0.05) 0px 4px 4px 0px,
+    rgba(45, 45, 45, 0.05) 0px 2px 2px 0px,
+    rgba(35, 35, 35, 0.05) 0px 64px 64px 0px,
+    rgba(49, 49, 49, 0.05) 0px 32px 32px 0px;
+  transform: translate(-10px);
+}
+
+.hover-elevate:active {
+  box-shadow: none;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media screen and (max-width: 512px) {
+  .footer {
+    justify-content: center;
+  }
 }

@@ -2,31 +2,33 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shoe Bar</title>
-    <link rel="stylesheet" href="https://unpkg.com/reset-css@5.0.1/reset.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>My Store</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header class="menu-bar container">
-      <img src="./images/logo.png" alt="logo" class="logo" />
-      <nav class="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="/" class="nav-link">Collections</a></li>
-          <li class="nav-item"><a href="/" class="nav-link">Products</a></li>
-          <li class="nav-item"><a href="/" class="nav-link">About</a></li>
-        </ul>
-      </nav>
+    <header class="menu-bar-wrapper">
+      <div class="menu-bar container">
+        <img src="./images/logo.png" alt="logo" class="logo" />
+        <nav class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="/" class="nav-link">Collections</a></li>
+            <li class="nav-item"><a href="/" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="/" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       <!-- Hero Section -->
       <section class="hero-section section">
         <h1 class="hero-title container">
-          Shoe Bar,<br />
-          By Shabu 
+          Any Shoes,<br />
+          To Your Door
         </h1>
       </section>
 
@@ -34,22 +36,22 @@
       <section class="section container">
         <h2 class="section-title">Collections</h2>
         <ul class="collection-list">
-          <li class="collection-item collection-item-one">
+          <li class="collection-item collection-item-one hover-elevate">
             <h3 class="collection-item-title">Classic</h3>
             <p>
               Nisl purus in mollis nunc sed id semper. Et tortor at risus
               viverra adipiscing at in.
             </p>
           </li>
-          <li class="collection-item collection-item-two">
+          <li class="collection-item collection-item-two hover-elevate">
             <h3 class="collection-item-title">Sport</h3>
             <p>Egestas diam in arcu cursus euismod quis.</p>
           </li>
-          <li class="collection-item collection-item-three">
+          <li class="collection-item collection-item-three hover-elevate">
             <h3 class="collection-item-title">Sandal</h3>
             <p>Placerat in egestas erat imperdiet sed euismod. Gravida quis.</p>
           </li>
-          <li class="collection-item collection-item-four">
+          <li class="collection-item collection-item-four hover-elevate">
             <h3 class="collection-item-title">Casual</h3>
             <p>Dignissim diam quis enim lobortis scelerisque fermentum dui.</p>
           </li>
@@ -69,18 +71,18 @@
             <div class="product-label">NEW</div>
             <h3 class="product-item-title">Pinky Pink</h3>
             <p>Congue nisi vitae suscipit tellus mauris a diam maecenas sed.</p>
-            <p class="price">฿2,490</p>
+            <p class="price">2,490</p>
           </li>
           <li class="product-item">
             <img
               src="./images/out-of-the-blue.jpg"
               alt="Photo by Alexander Rotker on Unsplash"
-              class="product-item-image "
+              class="product-item-image"
             />
             <div class="product-label">SALE</div>
             <h3 class="product-item-title">Out of the Blue</h3>
             <p>Non sodales neque sodales ut etiam sit amet nisl purus.</p>
-            <p class="price">฿4,990</p>
+            <p class="price">4,990</p>
           </li>
           <li class="product-item">
             <img
@@ -93,11 +95,16 @@
               Ridiculus mus mauris vitae ultricies leo. Libero id faucibus nisl
               tincidunt.
             </p>
-            <p class="price">฿7,990</p>
+            <p class="price">7,990</p>
           </li>
           <li class="product-item">
             <img
-              src="./images/product-red.jpg"
+              srcset="
+              ./images/product-red-1x.jpg 1x
+              ./images/product-red-2x.jpg 2x
+              ./images/product-red-3x.jpg 3x
+              "
+              src="./images/product-red-3x.jpg"
               alt="Photo by REVOLT on Unsplash"
               class="product-item-image"
             />
@@ -106,7 +113,7 @@
               Morbi tristique senectus et netus. In iaculis nunc sed augue lacus
               viverra.
             </p>
-            <p class="price">฿9,990</p>
+            <p class="price">9,990</p>
           </li>
           <li class="product-item">
             <img
@@ -116,7 +123,7 @@
             />
             <h3 class="product-item-title">Just Some Random Shoes</h3>
             <p>Lectus mauris ultrices eros in cursus turpis massa.</p>
-            <p class="price">฿7,990</p>
+            <p class="price">7,990</p>
           </li>
           <li class="product-item">
             <img
@@ -126,7 +133,7 @@
             />
             <h3 class="product-item-title">Military Shoes Woohoo</h3>
             <p>Elementum facilisis leo vel fringilla est ullamcorper eget.</p>
-            <p class="price">฿1,990</p>
+            <p class="price">1,990</p>
           </li>
         </ul>
       </section>
@@ -135,9 +142,12 @@
       <section class="section container">
         <h2 class="section-title">Our Story</h2>
         <div class="about-content">
-          <img src="./images/our-story.jpg" alt="Photo by Raoul Ortega on Unsplash" class="about-image" />
+          <img
+            src="./images/our-story.jpg"
+            alt="Photo by Raoul Ortega on Unsplash"
+            class="about-image"
+          />
           <div class="about-info">
-  
             <p class="about-description">
               Vel orci porta non pulvinar. Non sodales neque sodales ut etiam sit
               amet nisl purus. Eget dolor morbi non arcu risus quis. Posuere urna
@@ -148,10 +158,47 @@
               a erat nam. Amet mauris commodo quis imperdiet massa. Amet venenatis
               urna cursus eget.
             </p>
-            <a href="/" class="button">Know Us More</a>
+            <a href="about.html" class="button">Know Us More</a>
           </div>
         </div>
       </section>
+
+      <!-- Social List -->
+      <ul class="social-list">
+        <li class="social-item">
+          <a href="/">
+            <img
+              src="images/social-logo/facebook-logo.svg"
+              alt="facebook-logo"
+              class="social-logo"
+            />
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="/">
+            <img
+              src="images/social-logo/twitter-logo.svg"
+              alt="twitter-logo"
+              class="social-logo"
+            />
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="/">
+            <img
+              src="images/social-logo/line-logo.svg"
+              alt="line-logo"
+              class="social-logo"
+            />
+          </a>
+        </li>
+      </ul>
     </main>
+
+    <footer class="footer container">
+      © ANYSHOE 2022
+    </footer>
+
+
   </body>
 </html>
