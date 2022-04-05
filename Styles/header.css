@@ -1,0 +1,136 @@
+.header {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1080px;
+    background-image: url("../Images/code.jpg");
+    background-size: cover;
+    padding: 15px;
+}
+
+.header-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(161,170,176,0.8);
+    z-index: 1;
+}
+
+.header-content {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header-content h1 {
+    color:white;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.header-content h2 {
+    color:white;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.header-content a {
+    text-decoration: none;
+    color: black;
+    font-size: 70px;
+}
+
+.header-content a:hover {
+    color: rgb(57, 118, 231);
+}
+
+/* Navbar */
+.navbar {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    z-index: 10;
+}
+
+.nav-menu a {
+    padding: 0px 12px;
+    text-decoration: none;
+    color: rgb(175, 171, 171);
+}
+
+.nav-menu a:hover {
+    padding: 0px 12px;
+    text-decoration: none;
+    color: rgb(57, 118, 231);
+}
+
+.navigate {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-top {
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid white;
+    text-align: center;
+}
+
+.arrow-top a {
+    color: black;
+}
+
+.arrow-top i {
+    display: block;
+    margin-top: 3px;
+}
+
+.arrow-top a:hover {
+    color: rgb(57, 118, 231);
+}
+
+@media screen and (max-width: 512px) {
+    .header-content h1 {
+        font-size: 40px;
+    }
+    .header-content h2 {
+        font-size: 30px;
+    }
+    .header-content a {
+        font-size: 50px;
+    }
+    .nav-menu {
+        padding: 0px 5px;
+    }
+    .nav-menu a {
+        padding: 0px 5px;
+    }
+}

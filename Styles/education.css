@@ -1,0 +1,54 @@
+#education {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #dcd9d9;
+}
+
+.education-header {
+    display: flex;
+    justify-content: center;
+}
+
+.education-block {
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    border: 1px solid #dcd9d9;
+    text-align: left;
+}
+
+.education-block h4 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    display: inline-block;
+    margin: 0;
+}
+
+.education-block h5 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #7e8890;
+    margin: 0 0 15px 0;
+}
+
+.education-block span {
+    color: #74808a;
+    font-size: 1.2em;
+    float: right;
+}
+
+.education-block ul {
+    margin-left: 36px;
+}
+
+.education-block li {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+@media screen and (max-width: 768px) {
+    .education-block span {
+        float: none;
+    }
+}

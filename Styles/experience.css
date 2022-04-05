@@ -1,0 +1,129 @@
+#experience {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-bottom: 1px solid #dcd9d9;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: center;
+}
+
+.timeline {
+    margin: 30px auto 0 auto;
+    position: relative;
+    max-width: 1000px;
+}
+
+.timeline:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 303px;
+    right: auto;
+    height: 100%;
+    width: 3px;
+    background: #bdc3c7;
+    color: #f2f2f5;
+    z-index: 0;
+}
+
+.timeline:after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 40px;
+    background: #bdc3c7;
+    background: linear-gradient(to bottom, #bdc3c7, rgba(189,195,199,0));
+    top: 100%;
+    left: 303px;
+}
+
+.timeline-point {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.timeline-icon {
+    position: relative;
+    color: #000;
+    width: 50px;
+    height: 50px;
+    background: #bdc3c7;
+    border-radius: 50%;
+    float: left;
+    z-index: 99;
+    margin-left: 280px;
+}
+
+.timeline-icon i {
+    display: block;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.timeline-date {
+    width: 260px;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-weight: 300;
+    color: #374054;
+}
+
+.timeline-content {
+    margin-left: 350px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 15px;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.timeline-content h4 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    display: inline-block;
+    margin: 0;
+}
+
+.timeline-content h5 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #7e8890;
+    margin: 0 0 15px 0;
+}
+
+.timeline-content ul {
+    margin-left: 36px;
+}
+
+.timeline-content li {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-point {
+        margin-bottom: 50px;
+    }
+    .timeline:before {
+        left: 23px;
+    }
+    .timeline:after {
+        left: 23px;
+    }
+    .timeline-icon {
+        margin-left: 0px;
+    }
+    .timeline-content {
+        position: relative;
+        top: 40px;
+        margin-left: 64px;
+    }
+}

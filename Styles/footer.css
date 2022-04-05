@@ -1,0 +1,28 @@
+.footer {
+    padding: 50px 0;
+    background-color: #2f3640;
+}
+
+.arrow {
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #b9bfc4;
+    text-align: center;
+}
+
+.arrow a {
+    color: #74808a;
+}
+
+.arrow i {
+    display: block;
+    margin-top: 3px;
+}
+
+.arrow a:hover {
+    color: rgb(57, 118, 231);
+}
