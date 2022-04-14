@@ -3,6 +3,24 @@
     background-color: #2f3640;
 }
 
+.footer p {
+    text-align: center;
+    color: white;
+    margin-top: 16px;
+}
+
+.footer a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 16px;
+}
+
+.footer a:hover {
+    color: rgb(57, 118, 231);
+}
+
 .arrow {
     cursor: pointer;
     display: block;
@@ -20,7 +38,11 @@
 
 .arrow i {
     display: block;
-    margin-top: 3px;
+    margin-top: -10px;
+}
+
+.arrow p {
+    color: white;
 }
 
 .arrow a:hover {
